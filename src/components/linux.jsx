@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 class Linux extends Component {
     state = {
@@ -20,6 +21,9 @@ class Linux extends Component {
                         </div>
                     ))}
                 </div>
+                <hr />
+                {/* outlet用来渲染嵌套路由中子路由中的内容 */}
+                <Outlet></Outlet>
             </React.Fragment>
         );
     }
