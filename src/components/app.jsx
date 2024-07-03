@@ -7,6 +7,7 @@ import Django from './django';
 import Web from './web';
 import WebContent from './webContent';
 import NotFound from './notFound';
+import LinuxContent from './linuxContent';
 
 class App extends Component {
     state = {  } 
@@ -22,6 +23,7 @@ class App extends Component {
                         <Route path='/web' element={<Web></Web>}></Route>
                         <Route path='/web/content' element={<WebContent></WebContent>}></Route>
                         {/* <Route path='/web/content/:chapter/:section' element={<WebContent></WebContent>}></Route> */}
+                        <Route path='/linux/content/:chapter' element={<LinuxContent></LinuxContent>}></Route>
                         <Route path='/404' element={<NotFound></NotFound>}></Route>
                         <Route path='*' element={<Navigate replace to='/404'></Navigate>}></Route>
                     </Routes>
