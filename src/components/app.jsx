@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import NavBar from './navbar';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import Home from './home';
 import Linux from './linux';
 import Django from './django';
 import Web from './web';
 import WebContent from './webContent';
+import NotFound from './notFound';
 
 class App extends Component {
     state = {  } 
@@ -17,10 +18,12 @@ class App extends Component {
                     <Routes>
                         <Route path='/' element={<Home></Home>}></Route>
                         <Route path='/linux' element={<Linux></Linux>}></Route>
-                        <Route path='/django' element={<Django></Django>}></Route>
+                        <Route path='/django' element={<Django id='wzy'></Django>}></Route>
                         <Route path='/web' element={<Web></Web>}></Route>
                         <Route path='/web/content' element={<WebContent></WebContent>}></Route>
                         {/* <Route path='/web/content/:chapter/:section' element={<WebContent></WebContent>}></Route> */}
+                        <Route path='/404' element={<NotFound></NotFound>}></Route>
+                        <Route path='*' element={<Navigate replace to='/404'></Navigate>}></Route>
                     </Routes>
                 </div>
                 

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 class Django extends Component {
     state = {  } 
-    render() { 
+    render() {
+        console.log(this.props.id);
         return <h1>Django</h1>;
     }
 }
