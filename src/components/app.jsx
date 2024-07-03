@@ -5,6 +5,7 @@ import Home from './home';
 import Linux from './linux';
 import Django from './django';
 import Web from './web';
+import WebContent from './webContent';
 
 class App extends Component {
     state = {  } 
@@ -18,7 +19,8 @@ class App extends Component {
                         <Route path='/linux' element={<Linux></Linux>}></Route>
                         <Route path='/django' element={<Django></Django>}></Route>
                         <Route path='/web' element={<Web></Web>}></Route>
-                        <Route path='/web/content/:chapter' element={<Web></Web>}></Route>
+                        <Route path='/web/content' element={<WebContent></WebContent>}></Route>
+                        {/* <Route path='/web/content/:chapter/:section' element={<WebContent></WebContent>}></Route> */}
                     </Routes>
                 </div>
                 
